@@ -4,7 +4,6 @@ zpublic class Main {
 
         try {
             BufferedOutputStream out = new BufferedOutputStream(
-                    new FileOutputStream("hocSinh.txt"));
             List<HocSinh> hocSinhs = new ArrayList<>();
             while (true) {
                 Scanner scan = new Scanner(System.in);
