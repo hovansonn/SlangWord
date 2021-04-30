@@ -9,8 +9,6 @@ zpublic class Main {
                 Scanner scan = new Scanner(System.in);
                 System.out.println("--------------------MENU--------------------");
                 System.out.println("1. Them hoc sinh");
-                System.out.println("2. Xem danh sach hoc sinh");
-                System.out.println("3. Cap nhat hoc sinh");
                 System.out.println("4. Xoa hoc sinh");
                 System.out.println("5. Import danh sach tu file csv");
                 System.out.println("6. Export danh sach ra file csv");
