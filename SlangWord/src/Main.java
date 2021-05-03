@@ -1,819 +1,90 @@
-zpublic class Main {
-    public static void main(String[] args)
-    {
+import java.io.*;
+import java.util.Scanner;
+import java.util.TreeSet;
 
-        try {
-            BufferedOutputStream out = new BufferedOutputStream(
-            List<HocSinh> hocSinhs = new ArrayList<>();
-            while (true) {
-                Scanner scan = new Scanner(System.in);
-                System.out.println("--------------------MENU--------------------");
-                System.out.println("1. Them hoc sinh");
-                System.out.println("4. Xoa hoc sinh");
-                System.out.println("5. Import danh sach tu file csv");
-                System.out.println("6. Export danh sach ra file csv");
-                System.out.println("7. Exit");
-
-                System.out.print("Nhap lua chon cua ban: ");
-                String choose = scan.nextLine();
-                if ("1".equals(choose)) {
-                    HocSinh hocSinh = new HocSinh();
-                    hocSinh.Nhap();
-                    hocSinhs.add(hocSinh);
-                    System.out.println("Add successfully");
-                } else if ("2".equals(choose)) {
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    }
-            
-                }
-            }
-            for (HocSinh hs :
-                    hocSinhs) {
-                out.write(hs.toString().getBytes(StandardCharsets.UTF_8));
-                out.write("\n".toString().getBytes(StandardCharsets.UTF_8));
-            }
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-}
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().comp
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);areTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
 public class Main {
-    public static void main(String[] args)
-    {
+    private static TreeSet<SlangWord> slangWords = new TreeSet<>();
 
+    public static void main(String[] args) {
+        loadSlangWord();
+        while (true) {
+            System.out.println("-----------MENU-----------");
+            System.out.println("1.Search by slang word");
+            System.out.println("2.Search by definition");
+            System.out.println("3.Show history");
+            System.out.println("4.Add 1 new slang word ");
+            System.out.println("5.Edit 1 slang word");
+            System.out.println("6.Delete 1 slang word");
+            System.out.println("7.Reset lang words ");
+            System.out.println("8.On this day slang word");
+            System.out.println("9.Quiz question by slang word");
+            System.out.println("10.Quiz question by definition");
+            System.out.println("11.Exit");
+
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter your choose: ");
+            String choose = scan.nextLine();
+            switch (choose) {
+                case "1":
+                    System.out.print("Enter slang word : ");
+                    String slang = scan.nextLine();
+                    feature1(slang);
+                    break;
+                case "2":
+                    System.out.print("Enter definition : ");
+                    String definition = scan.nextLine();
+                    feature2(definition);
+                    break;
+                case "7":
+                    loadSlangWord();
+                    break;
+            }
+        }
+    }
+
+
+    private static void loadSlangWord() {
+        BufferedReader reader;
         try {
-            BufferedOutputStream out = new BufferedOutputStream(
-                    new FileOutputStream("hocSinh.txt"));
-            List<HocSinh> hocSinhs = new ArrayList<>();
-            while (true) {
-                Scanner scan = new Scanner(System.in);
-                System.out.println("--------------------MENU--------------------");
-                System.out.println("1. Them hoc sinh");
-                System.out.println("2. Xem danh sach hoc sinh");
-                System.out.println("3. Cap nhat hoc sinh");
-                System.out.println("4. Xoa hoc sinh");
-                System.out.println("5. Import danh sach tu file csv");
-                System.out.println("6. Export danh sach ra file csv");
-                System.out.println("7. Exit");
+            reader = new BufferedReader(new FileReader("slang.txt"));
+            String line = reader.readLine();
+            while (line != null) {
+                String define = "";
+                String slang = line.split("`")[0];
+                if (line.contains("`"))
+                    define = line.split("`")[1];
+                else
+                    System.out.println(line);
+                SlangWord word = new SlangWord(slang, define);
+                slangWords.add(word);
+                line = reader.readLine();
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
-                System.out.print("Nhap lua chon cua ban: ");
-                String choose = scan.nextLine();
-                if ("1".equals(choose)) {
-                    HocSinh hocSinh = new HocSinh();
-                    hocSinh.Nhap();
-                    hocSinhs.add(hocSinh);
-                    System.out.println("Add successfully");
-                } else if ("2".equals(choose)) {
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    }
-            
-                }
+    private static void feature1(String slang) {
+        for (SlangWord word :
+                slangWords) {
+            if (word.getSlang().contains(slang))
+            {
+                System.out.println("Definition: " + word.getDefinition());
+                return;
             }
-            for (HocSinh hs :
-                    hocSinhs) {
-                out.write(hs.toString().getBytes(StandardCharsets.UTF_8));
-                out.write("\n".toString().getBytes(StandardCharsets.UTF_8));
+        }
+        System.out.println(slang + " NOT FOUND DEFINITION");
+    }
+
+    private static void feature2(String definition) {
+
+        for (SlangWord word :
+                slangWords) {
+            if (word.getDefinition().contains(definition))
+            {
+                System.out.println("Slang word: " + word.getSlang());
             }
-            out.flush();
-            out.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().comp
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                    System.out.println("---Xem danh sach theo---");
-                    System.out.println("1. Ma hoc sinh tang");
-                    System.out.println("2. Ma hoc sinh giam");
-                    System.out.println("3. Diem tang");
-                    System.out.println("4. Diem giam");
-                    System.out.print("Nhap lua chon cua ban: ");
-                    String choose2 = scan.nextLine();
-                    if ("1".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getMaHS().compareTo(b.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("2".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getMaHS().compareTo(a.getMaHS()));
-                        Xuat(hocSinhs);
-                    } else if ("3".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> a.getDiem() - b.getDiem());
-                        Xuat(hocSinhs);
-                    } else if ("4".equals(choose2)) {
-                        hocSinhs.sort((a, b) -> b.getDiem() - a.getDiem());
-                        Xuat(hocSinhs);
-                        Xuat(hocSinhs);

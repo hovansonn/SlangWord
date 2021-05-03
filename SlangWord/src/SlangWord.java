@@ -1,25 +1,30 @@
-public class SlangWord {
-    private String slag;
-    private String meaning;
+public class SlangWord implements Comparable<SlangWord> {
+    private String slang;
+    private String definition;
 
-    public String getSlag() {
-        return slag;
+    public String getSlang() {
+        return slang;
     }
 
-    public void setSlag(String slag) {
-        this.slag = slag;
+    public void setSlang(String slang) {
+        this.slang = slang;
     }
 
-    public String getMeaning() {
-        return meaning;
+    public String getDefinition() {
+        return definition;
     }
 
-    public void setMeaning(String meaning) {
-        this.meaning = meaning;
+    public void setDefinition(String definition) {
+        this.definition = definition;
     }
 
-    public SlangWord(String slag, String meaning) {
-        this.slag = slag;
-        this.meaning = meaning;
+    public SlangWord(String slang, String meaning) {
+        this.slang = slang;
+        this.definition = meaning;
+    }
+
+    @Override
+    public int compareTo(SlangWord slangWord) {
+        return slang.compareTo(slangWord.slang);
     }
 }
