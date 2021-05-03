@@ -362,7 +362,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField4))
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 1199, Short.MAX_VALUE)
+                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 1205, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -392,7 +392,7 @@ public class SlangWordDic extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1517, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1523, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,7 +425,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -438,7 +438,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
                     .addComponent(jLabel7)
-                    .addContainerGap(1386, Short.MAX_VALUE)))
+                    .addContainerGap(1392, Short.MAX_VALUE)))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -482,6 +482,7 @@ public class SlangWordDic extends javax.swing.JFrame {
 
         jButton14.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jButton14.setText("Edit");
+        jButton14.setEnabled(false);
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -496,7 +497,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -511,7 +512,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1335, Short.MAX_VALUE)))
+                    .addContainerGap(1341, Short.MAX_VALUE)))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -559,7 +560,7 @@ public class SlangWordDic extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(175, Short.MAX_VALUE)
+                .addContainerGap(181, Short.MAX_VALUE)
                 .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -568,7 +569,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
                     .addComponent(jLabel11)
-                    .addContainerGap(1386, Short.MAX_VALUE)))
+                    .addContainerGap(1392, Short.MAX_VALUE)))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -604,7 +605,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel9Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, 484, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel9Layout.createSequentialGroup()
@@ -615,7 +616,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1335, Short.MAX_VALUE)))
+                    .addContainerGap(1341, Short.MAX_VALUE)))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -700,7 +701,7 @@ public class SlangWordDic extends javax.swing.JFrame {
                     .addGroup(jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel10Layout.createSequentialGroup()
-                                .addGap(0, 4, Short.MAX_VALUE)
+                                .addGap(0, 10, Short.MAX_VALUE)
                                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(jRadioButton2)
@@ -769,8 +770,9 @@ public class SlangWordDic extends javax.swing.JFrame {
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButton8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -825,10 +827,10 @@ public class SlangWordDic extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 // history panel
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        StringJoiner string = new StringJoiner(" - ");
+        StringJoiner string = new StringJoiner("\n");
         for (SlangWord word :
                 historySearch) {
-            string.add("Slang word: " + word.getSlang() + " - " + word.getDefinition());
+            string.add("Slang word: " + word.getSlang() + " - " + word.getDefinition() );
         }
         jTextArea1.setText(string.toString());
         cardLayout.show(jPanel1, "card4");
@@ -872,30 +874,36 @@ public class SlangWordDic extends javax.swing.JFrame {
             }
         }
         slangWords.add(word);
+        JOptionPane.showMessageDialog(null,"Add Successfully");
         
     }//GEN-LAST:event_jButton12ActionPerformed
 // btn find in edit panel 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         
         String rsFeature1 = feature1(jTextField7.getText());
-        if ("".compareTo(rsFeature1)== 0) {
-            jTextField8.setText(rsFeature1);
+        String tmp = jTextField7.getText() + " NOT FOUND DEFINITION";
+        if (tmp.compareTo(rsFeature1)== 0) {
+            JOptionPane.showMessageDialog(null, jTextField7.getText() + " Not found!!");
         }
         else
-            jPanel7.add(new JLabel(jTextField7.getText() + " Not found!!"));
-        
+        {
+            jButton14.setEnabled(true);
+            jTextField8.setText(rsFeature1);
+        }
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         SlangWord word = new SlangWord();
-        word.setSlang(jTextField5.getText());
-        word.setDefinition(jTextField6.getText());
+        word.setSlang(jTextField7.getText());
+        word.setDefinition(jTextField8.getText());
         for (SlangWord slangWord :
                 slangWords) {
             if (slangWord.getSlang().compareTo(word.getSlang()) == 0) {
                 slangWord.setDefinition(word.getDefinition());
             }
         }
+        
+        JOptionPane.showMessageDialog(null,"Edit Successfully");
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
@@ -904,7 +912,10 @@ public class SlangWordDic extends javax.swing.JFrame {
             if (slangWord.getSlang().compareTo(jTextField9.getText()) == 0) {
                 int YesOrNo = JOptionPane.showConfirmDialog(null,"Do you want to delete Slang word:  " + slangWord.getSlang() +" - " + slangWord.getDefinition(),"Overwrite or Duplicate",JOptionPane.YES_NO_OPTION);
                 if(YesOrNo == 0)
+                {
                     slangWords.remove(slangWord);
+                    JOptionPane.showMessageDialog(null,"Delete Successfully");
+                }
                 return;
             }
         }
