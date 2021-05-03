@@ -1,3 +1,5 @@
+
+package slangword;
 public class SlangWord implements Comparable<SlangWord> {
     private String slang;
     private String definition;
